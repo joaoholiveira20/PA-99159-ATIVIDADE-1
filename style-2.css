@@ -4,3 +4,72 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* RESET DO NAVEGADOR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('assets/fundo-pg2.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    /* Flexbox no body para centralizar a caixa facilmente */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh;
+}
+
+/* CAIXA ESCURA */
+.header {
+    position: relative; /* Essencial para a logo não fugir daqui */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 70px 30px 30px 30px; /* Espaço extra em cima (70px) para a logo não tampar o texto */
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* LOGO SOBREPOSTA */
+.logo {
+    height: 125px;
+    position: absolute;
+    top: -62px; /* Puxa a logo para a borda (metade da altura) */
+    left: 50%;
+    transform: translateX(-50%); /* Garante que fique no centro exato */
+    transition: 0.3s ease;
+}
+
+/* EFEITO HOVER DA LOGO */
+.logo:hover {
+    /* Mantivemos o translateX para ela não sair do centro ao crescer */
+    transform: translateX(-50%) scale(1.10); 
+}
+
+/* TEXTO */
+.descricao {
+    color: #f5f5f5;
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ESTILO PARA A IMAGEM DOS TÍTULOS */
+img {
+    max-width: 50%; /* Garante que a imagem nunca fique maior que a caixa escura */
+    height: auto; /* Mantém a proporção correta da imagem (não achata) */
+    margin-top: 10px; /* Cria um espaço entre o texto e a imagem */
+    border-radius: 8px; /* Opcional: deixa os cantos da imagem levemente arredondados */
+    display: block; /* Permite usar margin auto para centralizar */
+    margin-left: auto;
+    margin-right: auto;
+}
