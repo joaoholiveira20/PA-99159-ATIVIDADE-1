@@ -73,3 +73,31 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+/* ESTILO DO BOTÃO DE VOLTAR */
+.btn-voltar {
+    padding: 12px 35px; /* Define a largura e altura do botão */
+    
+    /* Cores */
+    background: linear-gradient(135deg, #c50000, #8b0000); 
+    color: #ffffff; 
+    border: 2px solid #d4af37; /* Borda dourada do escudo */
+    
+    /* Fonte e Formato */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase; /* Letras maiúsculas */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    border-radius: 50px; /* Deixa as pontas bem redondinhas */
+    
+    /* Efeitos de sombra e transição */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+    transition: all 0.3s ease; /* Faz a animação ser suave */
+}
+
+/* EFEITO QUANDO O MOUSE PASSA POR CIMA */
+.btn-voltar:hover {
+    background: linear-gradient(135deg, #e60000, #a30000); /* Deixa o vermelho mais vivo */
+    transform: translateY(-3px) scale(1.05); /* O botão dá um pulinho pra cima e cresce */
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4); /* A sombra ganha um tom dourado */
+}
