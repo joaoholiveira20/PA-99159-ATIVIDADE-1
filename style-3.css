@@ -4,3 +4,123 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-image: url(assets/fundo-pagina3.jpg) ;
+     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    /* Flexbox no body para centralizar a caixa facilmente */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh;
+} 
+
+.cabecalho-topo {
+    position: absolute; 
+    top: 20px;          
+    left: 20px;         
+    display: flex;      /* Ativa o flexbox */
+    flex-direction: row; /* Coloca os itens lado a lado */
+    align-items: center; /* Alinha o texto verticalmente com o meio da logo */
+    gap: 15px;          /* Cria um espaço entre a imagem e o texto */
+}
+
+.logo-topo {
+    max-width: 125px;    /* Reduzi um pouco para não empurrar muito o texto */
+    height: auto;
+}
+
+h1 {
+    font-size: 22px; 
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif; /* Ajustando a vírgula que faltava */
+}
+
+/* --- Estilos do Menu --- */
+.menu-jogadores {
+    text-align: center;
+    margin: 30px 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu-jogadores select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #c22a1e; /* Vermelho Flamengo */
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- Estilos da Lista e dos Cartões --- */
+.lista-jogadores {
+    max-width: 800px; /* Limita a largura para não ficar esticado na tela toda */
+    margin: 0 auto; /* Centraliza a lista na tela */
+    padding: 20px;
+}
+
+.cartao-jogador {
+    display: flex; /* Coloca a imagem e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto levemente transparente */
+    color: white;
+    margin-bottom: 50px; /* Coloca um em baixo do outro com esse espaçamento */
+    padding: 10px;
+    border-radius: 12px;
+    border-left: 6px solid #c22a1e; /* Detalhe vermelho na lateral */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Sombra para dar profundidade */
+}
+
+.cartao-jogador img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover; /* Impede que a foto fique deformada */
+    border-radius: 50%; /* Deixa a foto redonda */
+    border: 3px solid #ffcc00; /* Borda dourada/amarela na foto */
+    margin-right: 20px; /* Espaço entre a foto e o texto */
+}
+
+.info-jogador h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #ffcc00; /* Nome do jogador em destaque */
+}
+
+.info-jogador p {
+    margin: 5px 0;
+    line-height: 1.0;
+}
+
+button{ 
+ display: inline-block;
+    padding: 10px 30px;
+    background: linear-gradient(135deg, #c50000, #8b0000);
+    /* color: #ffffff !important; */
+    text-decoration: none;
+    border: 2px solid #d4af37;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif; /* Adicionada a vírgula aqui */
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    margin: 10px; /* Espaço entre um botão e outro */
+}
+
+/* Corrigido de :houver para :hover */
+.btn-voltar:hover {
+    background: linear-gradient(135deg, #e60000, #a30000);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+
